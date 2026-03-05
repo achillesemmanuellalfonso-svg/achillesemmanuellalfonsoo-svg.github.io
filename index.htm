@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Achi's Printing Services</title>
+  <link rel="icon" href="plane.png" type="image/png">
+  <style>
+    /* --- REGISTRATION FORM STYLES --- */
+    #registration-page {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, dodgerblue, blue);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 9999;
+    }
+
+    .form-box {
+      background: #00c789;
+      padding: 25px;
+      width: 360px;
+      border-radius: 12px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+    }
+
+    .form-box h2 {
+      text-align: center;
+      color: black;
+      margin-bottom: 20px;
+    }
+
+    .form-box label {
+      font-weight: bold;
+      display: block;
+      margin-top: 12px;
+      color: black;
+      text-align: left;
+    }
+
+    .form-box input[type="text"],
+    .form-box select,
+    .form-box textarea {
+      width: 100%;
+      padding: 9px;
+      margin-top: 6px;
+      border-radius: 6px;
+      border: 1px solid #93c5fd;
+      font-size: 14px;
+      box-sizing: border-box;
+    }
+
+    .form-box textarea {
+      resize: none;
+      height: 80px;
+    }
+
+    .radio-group {
+      margin-top: 6px;
+      color: #1e40af;
+      text-align: left;
+    }
+
+    .radio-group input {
+      margin-right: 5px;
+      margin-left: 10px;
+    }
+
+    .form-box button {
+      margin-top: 18px;
+      width: 100%;
+      padding: 11px;
+      background-color: Dodgerblue;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 15px;
+      cursor: pointer;
+    }
+
+    .form-box button:hover {
+      background-color: #2563eb;
+    }
+
+    /* --- MAIN WEBSITE STYLES --- */
+    #main-content {
+      display: none; /* Hidden by default */
+    }
+
+    body.site-active {
+      background: linear-gradient(to bottom, #e6f2ff, Gold);
+      text-align: center;
+      color: Black;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: Dodgerblue;
+      color: white;
+      padding: 30px 20px;
+      font-size: 20px;
+    }
+
+    nav {
+      background-color: #002244;
+      padding: 12px;
+    }
+
+    nav a {
+      color: Dodgerblue;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 50px;
+      font-family: 'Times New Roman', Times, serif;
+    }
+
+    .slogan {
+      font-style: italic;
+      margin-top: 8px;
+      padding: 0%;
+    }
+
+    section {
+      padding: 30px 20px;
+    }
+
+    h2 {
+      color: #003566;
+      margin-bottom: 15px;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    li {
+      background-color: Green;
+      margin: 12px auto;
+      padding: 15px;
+      width: 65%;
+      border-radius: 10px;
+    }
+
+    p {
+      background-color: Yellow;
+      padding: 15px;
+      margin: 5px auto;
+      font-family: 'Times New Roman', Times, serif;
+      width: 70%;
+      border-radius: 20px;
+    }
+
+    footer {
+      background-color: #003566;
+      color: rgb(0, 0, 0);
+      padding: 15px;
+      margin-top: 30px;
+    }
+
+    pre {
+      background-color: rgb(0, 69, 116);
+      padding: 1px;
+      margin: 10px auto;
+      font-family: 'Times New Roman', Times, serif;
+      width: 50%;
+      border-radius: 20px;
+      color:White
+    }
+
+    .contact-link {
+      color:Pink;
+      font-weight: bold;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="registration-page">
+    <div class="form-box">
+      <h2>Student Registration</h2>
+      <form id="regForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label>Gender:</label>
+        <div class="radio-group">
+          <input type="radio" name="gender" value="Male" required> Male
+          <input type="radio" name="gender" value="Female"> Female
+        </div>
+
+        <label for="grade">Grade Level:</label>
+        <select id="grade" name="grade" required>
+          <option value="">-- Select Grade --</option>
+          <option>Grade 7</option>
+          <option>Grade 8</option>
+          <option>Grade 9</option>
+          <option>Grade 10</option>
+          <option>Grade 11</option>
+          <option>Grade 12</option>
+        </select>
+
+        <label for="comments">Comments:</label>
+        <textarea id="comments" name="comments"></textarea>
+
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </div>
+
+  <div id="main-content">
+    <header>
+      <h1>Achi's Printing Services</h1>
+      <p class="slogan">"Make Your Flow Like A Rainbow"</p>
+    </header>
+
+    <nav>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <section id="about">
+      <h2>About Us</h2>
+      <p>We are helping students, teachers an people in the community to make their jobs easy. We offer different services like customizing, making, and creating. Achi's Printing Services isn't just for schoolworks, we are also here to help at making Birthday or Wediing Invitations. We will make sure that the flow of your celebration reflects like a Rainbow.</p>
+    </section>
+
+    <section id="services">
+      <h2>Services Offered</h2>
+      <ul>
+<li><img src="https://img.icons8.com/ios-filled/24/003566/banner.png"> Making Tarpaulins</li>
+
+<li><img src="https://img.icons8.com/ios-filled/24/003566/sticker.png"> Customizing Stickers</li>
+
+<li><img src="https://img.icons8.com/ios-filled/24/003566/key.png"> Making Keychains, Plate Numbers, etc.</li>
+
+<li><img src="https://img.icons8.com/ios-filled/24/003566/homework.png"> Doing School Works</li>
+
+<li><img src="https://img.icons8.com/ios-filled/24/003566/wedding-rings.png"> Creating Wedding or Birthday Invitations</li>
+
+<li><img src="https://img.icons8.com/ios-filled/24/003566/design.png"> Creating Logos</li>
+
+      </ul>
+    </section>
+
+    <section id="contact">
+      <h2>Contact Us</h2>
+      <pre>
+<a href="mailto:achisprintingservices@gmail.com" class="contact-link">Email Us</a>
+Phone: 09976785457
+
+<a href="https://www.facebook.com/search/top?q=Achilles%20Emmanuel%20Alfonso" class="contact-link">
+Facebook:
+Achilles Emmanuel Alfonso
+</a>
+      </pre>
+    </section>
+
+    <footer>
+      <p style="width: 100%; border-radius: 0;">Achi's Printing Services | All Rights Reserved</p>
+    </footer>
+  </div>
+  <script>
+    const regForm = document.getElementById('regForm');
+    const regPage = document.getElementById('registration-page');
+    const mainContent = document.getElementById('main-content');
+
+    regForm.addEventListener('submit', function(e) {
+      e.preventDefault(); // Stop page from refreshing
+      
+      // Hide the registration form
+      regPage.style.display = 'none';
+      
+      // Show the main website and apply its body styles
+      mainContent.style.display = 'block';
+      document.body.classList.add('site-active');
+      
+      // Optional: scroll to top
+      window.scrollTo(0, 0);
+    });
+  </script>
+
+</body>
+</html>
